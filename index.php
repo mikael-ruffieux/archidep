@@ -6,12 +6,12 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 // .display errors
 
-define('BASE_URL', '/comem-archidep-php-todo-exercise/');
-define('DB_USER', 'todolist');
-define('DB_PASS', 'todolist_password');
-define('DB_NAME', 'todolist');
-define('DB_HOST', 'localhost');
-define('DB_PORT', '3306');
+define('BASE_URL', getenv('TODOLIST_BASE_URL' ?: '/'));
+define('DB_USER', getenv('TODOLIST_DB_USER'));
+define('DB_PASS', getenv('TODOLIST_DB_PASS'));
+define('DB_NAME', getenv('TODOLIST_DB_NAME'));
+define('DB_HOST', getenv('TODOLIST_DB_HOST'));
+define('DB_PORT', getenv('TODOLIST_DB_PORT'));
 
 
 
